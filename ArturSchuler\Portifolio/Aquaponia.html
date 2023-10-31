@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquaponia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Introdução à Aquaponia</h1>
+        <nav>
+            <a href="inicio.html">Inicio</a>
+            <a href="Aquaponia.html">O que é Aquaponia?</a>
+            <a href="comoFunc.html">Como Funciona</a>
+            <a href="ComoConstruir.html">Como Fazer</a>
+            <a href="sobre.html">Contato</a>
+
+        </nav>
+    </header>
+    <main>
+        <section class="introduction">
+            <h2>Bem-vindo ao mundo da Aquaponia</h2>
+            <img src="aquaponia1.png" alt="Imagem ilustrativa de um sistema de aquaponia">
+        </section>
+        <div class="carousel">
+            <p>Aquaponia é uma técnica revolucionária que combina aquicultura (criação de peixes) e hidroponia (cultivo
+                de plantas sem solo). Através de um sistema integrado, os peixes fornecem nutrientes para as plantas, e
+                as plantas ajudam a purificar a água para os peixes. É um sistema sustentável e ecológico que promete
+                transformar a forma como produzimos alimentos.</p>
+            <p>Em termos de vegetais, as hortaliças de folhas, como alface, couve, rúcula e espinafre, são especialmente
+                populares devido ao seu crescimento rápido e requisitos menos rigorosos. Ervas aromáticas, como
+                manjericão,
+                coentro e hortelã, também prosperam nesses sistemas. Além das plantas, a aquaponia permite a criação de
+                várias
+                espécies de peixes, incluindo tilápia, carpa e bagre. Com a combinação certa de plantas e peixes, a
+                aquaponia
+                oferece uma abordagem holística para a produção de alimentos frescos e nutritivos ao longo de todo o
+                ano.</p>
+            <img src="aquaponiadomestica.jpg" class="carousel-image active">
+            <img src="morangovertical.jpg" class="carousel-image">
+            <img src="aquaponiahorizontal.jpg" class="carousel-image">
+            <img src="aquaponiavertical1.jpg" class="carousel-image">
+            <img src="estufa.jpg" class="carousel-image">
+            <img src="aquaponiaIsopor.jpg" class="carousel-image">
+            <img src="aquaponianacaixa.jpg" class="carousel-image">
+            <img src="peixes.jpg" class="carousel-image">
+
+            <button class="prev">Anterior</button>
+            <button class="next">Próxima</button>
+        </div>
+
+    </main>
+    <footer>
+        <p>© 2023 - Introdução à Aquaponia por Artur Schuler Fonseca</p>
+    </footer>
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        prevButton.addEventListener('click', function () {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex--;
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            }
+            images[currentImageIndex].classList.add('active');
+        });
+
+        nextButton.addEventListener('click', function () {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex++;
+            if (currentImageIndex > images.length - 1) {
+                currentImageIndex = 0;
+            }
+            images[currentImageIndex].classList.add('active');
+        });
+
+    </script>
+
+</body>
+
+</html>

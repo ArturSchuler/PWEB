@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquaponia</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Introdução à Aquaponia</h1>
+        <nav>
+            <a href="inicio.html">Inicio</a>
+            <a href="Aquaponia.html">O que é Aquaponia?</a>
+            <a href="comoFunc.html">Como Funciona</a>
+            <a href="ComoConstruir.html">Como Fazer</a>
+            <a href="sobre.html">Contato</a>
+            
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Sobre</h1>
+            <p>Esse site é dedicado a todos aqueles que apoiam e estudam Aquaponia e sustentábilidade. </p>
+
+            <h2>Contato</h2>
+            <p>Artur Schuler Fonseca</p>
+            <p>Tel: +55 15996626164</p>
+            <p>Instagran: <a href="https://www.instagram.com/arturschuler/" target="_blank">
+                @arturschuler
+            </a> </p>
+            
+            
+        </div>
+</body>
+
+
+</main>
+<footer>
+    <p>© 2023 - Introdução à Aquaponia por Artur Schuler Fonseca</p>
+</footer>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>
